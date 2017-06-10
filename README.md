@@ -29,14 +29,3 @@
 + Aync Await
 + Getter/Setter Functions
 + IIFE to Blocks
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-
-
