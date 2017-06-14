@@ -46,20 +46,26 @@ Shorter syntax for function expression with simplified scope rules.
 // Basic syntax
 ( /* Function Parameters */ ) => { /* Function Body */ }
 
+
 // No parameters
 () => {}
+
 
 // Multiple parameters
 ( param1, param2, paramN ) => {}
 
+
 // Destructuring parameters
 ( [x, y], [1, 2] ) => {}
+
 
 // Default parameters
 ( x = 1 ) => {}
 
+
 // Rest parameters
 ( ...rest ) => {}
+
 
 /**
  * implicit return: mustaches and return keyword are
@@ -67,8 +73,10 @@ Shorter syntax for function expression with simplified scope rules.
  */
 () => expression
 
+
 // for returning objects wrap object inside parenthesis
 () => ({ x: 1 })
+
 
 // With single parameter parenthesis are optional
 singleParam => {} 
@@ -78,14 +86,14 @@ singleParam => {}
 
 #### Notes
 
-1. Arrow function can't be used as constructor function ( i.e. can't be instantiated with new keyword ).
-2. Arrow function can't be used as generator.
-3. Arrow function doesn't have a prototype property.
-4. Arrow function doesn't bind this, argument, new.target, super.
-5. Arrow function has lexical this meaning it inherits this from the enclosing context.
-6. Arrow function with call(), apply(), bind() ignores the passed context and only consider the passed arguments.
-7. Arrow function ignores Strict mode rules regard this .
-8. Arrow function doesn't have arguments object, it inherits it from the enclosing regular function otherwise RefrenceError is thrown.
+1. Arrow function can't be used as **constructor** function ( i.e. can't be instantiated with `new` keyword ).
+2. Arrow function can't be used as **generator**.
+3. Arrow function doesn't have a `prototype` property.
+4. Arrow function doesn't bind `this`, `argument`, `new.target`, `super`.
+5. Arrow function has lexical `this` meaning it **inherits `this` from the enclosing context**.
+6. Arrow function with `call()`, `apply()`, `bind()` ignores the passed context and only consider the passed arguments.
+7. Arrow function ignores Strict mode rules regard `this`.
+8. Arrow function doesn't have `arguments` object, it inherits it from the enclosing regular function otherwise `RefrenceError` is thrown.
 
 ```javascript
 // [ Note 3 ]
@@ -137,22 +145,22 @@ Arrow functions are used usually as callback functions, non-method functions or 
 
 1. use as functional programming methods iterator function.
 2. use as callback in timing functions.
-3. use as Promises callback functions.
-4. use as simpler IIFE.
+3. use as **Promises** callback functions.
+4. use as simpler **IIFE**.
 
 ```javascript
-// [ Item ]
+// [ Item 1 ]
 let arr = [1, 2, 3, 4, 5];
 let odd = arr.filter( item => item % 2 !== 0 ); // [1, 3, 5]
 
 
-// [ Item ]
+// [ Item 2 ]
 setTimeout(() => {
   console.log( 'I\'m simple :)' )
 }, 100);
 
 
-// [ Item ]
+// [ Item 3 ]
 let p = new Promise((resolve, reject) => {
   // Do your magic
 });
@@ -162,7 +170,7 @@ p.then(data => {
 });
 
 
-// [ Item ]
+// [ Item 4 ]
 ;(() => {
   // IIFE without passed arguments
 })();
