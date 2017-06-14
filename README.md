@@ -179,3 +179,70 @@ p.then(data => {
   // IIFE with passed arguments
 })(window);
 ``` 
+
+#### `let`
+
+##### Description
+
+Used to create a global-scoped or block-scoped variable whose refrence can be re-assigned but it can't be re-declared in the same scope.
+
+
+
+##### Syntax
+
+```javascript
+let identifier [= expression]; // Assignment is optional
+```
+
+
+
+
+##### Notes
+
+1. `let` creates global-scoped & block-scoped variable contrary to `var` that creates global-scoped & **function-scoped** only.
+2. `let` doesn't create properties on global object contrary to `var`.
+3. `let` allows only a single declaration for a sepecific identifier within the same scope. redeclaring the same variable created by `let` within the same scope throws an `SuntaxError`.
+4. `let` assignment (a.k.a: intialzation) is optional meaninig you can do this `let a;`.
+5. `let` gets hoisted but it can't be accessed within the **Temporal Dead Zone[1]** (a.k.a: **TDZ**) means you ca't reference the identifier before or within the declaration statement or `RefrenceError` is thrown;
+
+[1] **Temporal Dead Zone** : The period between scope starting position untill the declaration statement position.
+
+```javascript
+// [ Item 1 ]
+let x = 0; // global-scoped
+function fn() {
+    let y = 1; // function-scoped also block-scoped
+    if ( y === 1 ) {
+        let z = 2; // block-scoped
+    }
+}
+
+
+// [ Item 2 ]
+let x = 0;
+window.x; // undefined not 0
+
+
+// [ Item 3 ]
+let x = 0;
+let x = 1; // SyntaxError
+
+let y = 1;
+if ( true ) {
+    let y = 2 // Totally valid
+}
+
+
+// [ Item 5 ]
+let x = 0;
+
+let fn = function () {
+    return x;
+    let x = 1; // Error below asserts that x is hoisted
+};
+
+fn() // RefrenceError
+```
+
+##### Practical Usage
+- Use `let` whereever you need to re-assign the same identifier to a different value, with loops for instance, otherwise use `const`.
