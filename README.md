@@ -30,7 +30,6 @@
 + Getter/Setter Functions
 + IIFE to Block
 
-<br /> <br />
 
 ### Arrow Function
 
@@ -41,7 +40,6 @@ Shorter syntax for function expression with simplified scope rules.
 
 
 
-<br /> 
 
 #### Syntax
 
@@ -86,7 +84,6 @@ singleParam => {}
 ```
 
 
-<br />
 
 #### Notes
 
@@ -142,7 +139,6 @@ fn( 0 );
 
 
 
-<br />
 
 #### Practical usage
 
@@ -185,7 +181,6 @@ p.then(data => {
 })(window);
 ``` 
 
-<br /> <br/>
 
 ### let, const and Block Scoping
 
@@ -196,7 +191,6 @@ p.then(data => {
 Used to create a global-scoped or block-scoped variable whose refrence **can** be re-assigned but it can't be re-declared in the same scope.
 
 
-<br />
 
 ##### Syntax
 
@@ -206,7 +200,6 @@ let identifier [= expression]; // Assignment is optional
 
 
 
-<br />
 
 ##### Notes
 
@@ -254,24 +247,20 @@ let fn = function () {
 
 fn() // RefrenceError
 ```
-<br />
 
 ##### Practical Usage
 - Use `let` whereever you need to re-assign the same identifier to a different value, with loops for instance, otherwise use `const`.
 
 
-<br /> <br />
 
 #### `const`
 
-<br /> <br />
 
 ##### Description
 
 The same as `let` with some differences. It is used to create a global-scoped or block-scoped variable whose refrence **can't** be re-assigned and it can't be re-declared in the same scope.
 
 
-<br />
 
 ##### Syntax
 
@@ -281,7 +270,6 @@ const IDENTIFIER = expression; // Assignment is a must
 
 
 
-<br />
 
 ##### Notes
 
@@ -339,7 +327,6 @@ const FN = function () {
 
 FN() // RefrenceError
 ```
-<br />
 
 ##### Practical Usage
 - Use `const` whereever you don't need to re-assign the same identifier to a different value, otherwise use `let`.
