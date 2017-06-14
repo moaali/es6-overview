@@ -180,11 +180,13 @@ p.then(data => {
 })(window);
 ``` 
 
+### let, const and Block Scoping
+
 #### `let`
 
 ##### Description
 
-Used to create a global-scoped or block-scoped variable whose refrence can be re-assigned but it can't be re-declared in the same scope.
+Used to create a global-scoped or block-scoped variable whose refrence **can** be re-assigned but it can't be re-declared in the same scope.
 
 
 
@@ -202,10 +204,10 @@ let identifier [= expression]; // Assignment is optional
 1. `let` creates global-scoped & block-scoped variable contrary to `var` that creates global-scoped & **function-scoped** only.
 2. `let` doesn't create properties on global object contrary to `var`.
 3. `let` allows only a single declaration for a sepecific identifier within the same scope. redeclaring the same variable created by `let` within the same scope throws an `SuntaxError`.
-4. `let` assignment (a.k.a: intialzation) is optional meaninig you can do this `let a;`.
-5. `let` gets hoisted but it can't be accessed within the **Temporal Dead Zone[1]** (a.k.a: **TDZ**) means you ca't reference the identifier before or within the declaration statement or `RefrenceError` is thrown;
+4. `let` assignment (a.k.a: intialzation) is **optional** meaninig you can do this `let x;`.
+5. `let` gets hoisted but it can't be accessed within the **Temporal Dead Zone[1]** (a.k.a: **TDZ**) means you can't reference the identifier before or within the declaration statement or `RefrenceError` is thrown;
 
-[1] **Temporal Dead Zone** : The period between scope starting position untill the declaration statement position.
+- [1] **Temporal Dead Zone** : The period between scope starting position untill the declaration statement position.
 
 ```javascript
 // [ Item 1 ]
@@ -246,3 +248,72 @@ fn() // RefrenceError
 
 ##### Practical Usage
 - Use `let` whereever you need to re-assign the same identifier to a different value, with loops for instance, otherwise use `const`.
+
+
+
+#### `const`
+
+##### Description
+
+The same as `let` with some differences. It is used to create a global-scoped or block-scoped variable whose refrence **can't** be re-assigned and it can't be re-declared in the same scope.
+
+
+
+##### Syntax
+
+```javascript
+const IDENTIFIER = expression; // Assignment is a must
+```
+
+
+
+
+##### Notes
+
+1. `const` creates global-scoped & block-scoped variable contrary to `var` that creates global-scoped & **function-scoped** only, same as `let`.
+2. `const` doesn't create properties on global object contrary to `var`, same as `let`.
+3. `const` allows only a single declaration for a sepecific identifier within the same scope. redeclaring the same variable created by `const` within the same scope throws an `SuntaxError`.
+4. `const` assignment (a.k.a: intialzation) is **a must** meaninig you **can't** do this `const x;` contrary to `let`.
+5. `const` gets hoisted but it can't be accessed within the **Temporal Dead Zone** (a.k.a: **TDZ**) means you can't reference the identifier before or within the declaration statement or `RefrenceError` is thrown;
+
+- Common practice when using `const`: capitalize all identifier letters and in case multiple words identifier use `_` as separator.
+
+```javascript
+// [ Item 1 ]
+const X = 0; // global-scoped
+function fn() {
+    const Y = 1; // function-scoped also block-scoped
+    if ( Y === 1 ) {
+        const Z = 2; // block-scoped
+    }
+}
+
+
+// [ Item 2 ]
+const X = 0;
+window.X; // undefined not 0
+
+
+// [ Item 3 ]
+const X = 0;
+const X = 1; // SyntaxError
+
+const Y = 1;
+if ( true ) {
+    const Y = 2 // Totally valid
+}
+
+
+// [ Item 5 ]
+const X = 0;
+
+const FN = function () {
+    return x;
+    const X = 1; // Error below asserts that x is hoisted
+};
+
+fn() // RefrenceError
+```
+
+##### Practical Usage
+- Use `const` whereever you don't need to re-assign the same identifier to a different value, otherwise use `let`.
