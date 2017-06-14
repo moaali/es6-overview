@@ -31,6 +31,7 @@
 + IIFE to Block
 
 <br /> <br />
+
 ### Arrow Function
 
 #### Description
@@ -86,6 +87,7 @@ singleParam => {}
 
 
 <br />
+
 #### Notes
 
 1. Arrow function can't be used as **constructor** function ( i.e. can't be instantiated with `new` keyword ).
@@ -141,6 +143,7 @@ fn( 0 );
 
 
 <br />
+
 #### Practical usage
 
 Arrow functions are used usually as callback functions, non-method functions or generally at situation where the dynamic binding of `this` and `arguments` isn't needed, for example:
@@ -182,7 +185,8 @@ p.then(data => {
 })(window);
 ``` 
 
-<br><br><br>
+<br /> <br/>
+
 ### let, const and Block Scoping
 
 #### `let`
@@ -192,7 +196,8 @@ p.then(data => {
 Used to create a global-scoped or block-scoped variable whose refrence **can** be re-assigned but it can't be re-declared in the same scope.
 
 
-<br>
+<br />
+
 ##### Syntax
 
 ```javascript
@@ -201,7 +206,8 @@ let identifier [= expression]; // Assignment is optional
 
 
 
-<br>
+<br />
+
 ##### Notes
 
 1. `let` creates global-scoped & block-scoped variable contrary to `var` that creates global-scoped & **function-scoped** only.
@@ -248,20 +254,25 @@ let fn = function () {
 
 fn() // RefrenceError
 ```
-<br>
+<br />
+
 ##### Practical Usage
 - Use `let` whereever you need to re-assign the same identifier to a different value, with loops for instance, otherwise use `const`.
 
 
-<br><br>
+<br /> <br />
+
 #### `const`
-<br>
+
+<br /> <br />
+
 ##### Description
 
 The same as `let` with some differences. It is used to create a global-scoped or block-scoped variable whose refrence **can't** be re-assigned and it can't be re-declared in the same scope.
 
 
-<br>
+<br />
+
 ##### Syntax
 
 ```javascript
@@ -270,7 +281,8 @@ const IDENTIFIER = expression; // Assignment is a must
 
 
 
-<br>
+<br />
+
 ##### Notes
 
 1. `const` creates global-scoped & block-scoped variable contrary to `var` that creates global-scoped & **function-scoped** only, same as `let`.
@@ -327,6 +339,7 @@ const FN = function () {
 
 FN() // RefrenceError
 ```
-<br>
+<br />
+
 ##### Practical Usage
 - Use `const` whereever you don't need to re-assign the same identifier to a different value, otherwise use `let`.
