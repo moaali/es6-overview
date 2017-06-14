@@ -180,6 +180,7 @@ p.then(data => {
 })(window);
 ``` 
 
+→→
 ### let, const and Block Scoping
 
 #### `let`
