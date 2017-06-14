@@ -69,12 +69,12 @@ Shorter syntax for function expression with simplified scope rules.
 
 /**
  * implicit return: mustaches and return keyword are
- * optional when return single expression
+ * optional when returning single expression
  */
 () => expression
 
 
-// for returning objects wrap object inside parenthesis
+// For returning objects wrap object inside parenthesis
 () => ({ x: 1 })
 
 
@@ -141,12 +141,12 @@ fn( 0 );
 
 #### Practical usage
 
-Arrow functions are used usually as callback functions, non-method functions or generally at situation where the dynamic binding of `this` and `arguments` isn't needed for example:
+Arrow functions are used usually as callback functions, non-method functions or generally at situation where the dynamic binding of `this` and `arguments` isn't needed, for example:
 
-1. use as functional programming methods iterator function.
-2. use as callback in timing functions.
-3. use as **Promises** callback functions.
-4. use as simpler **IIFE**.
+1. Use as `Array` functional programming methods iterator function.
+2. Use as callback in timing functions.
+3. Use as **Promises** callback functions.
+4. Use as simpler **IIFE**.
 
 ```javascript
 // [ Item 1 ]
