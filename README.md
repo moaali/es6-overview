@@ -30,7 +30,7 @@
 + Getter/Setter Functions
 + IIFE to Block
 
-
+<br><br><br>
 ### Arrow Function
 
 #### Description
@@ -39,7 +39,7 @@ Shorter syntax for function expression with simplified scope rules.
 
 
 
-
+<br><br>
 #### Syntax
 
 ```javascript
@@ -180,7 +180,7 @@ p.then(data => {
 })(window);
 ``` 
 
-→→
+<br><br><br>
 ### let, const and Block Scoping
 
 #### `let`
