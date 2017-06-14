@@ -30,7 +30,7 @@
 + Getter/Setter Functions
 + IIFE to Block
 
-<br/> <br/>
+<br /> <br />
 ### Arrow Function
 
 #### Description
@@ -40,7 +40,8 @@ Shorter syntax for function expression with simplified scope rules.
 
 
 
-<br/>
+<br /> 
+
 #### Syntax
 
 ```javascript
@@ -84,7 +85,7 @@ singleParam => {}
 ```
 
 
-<br>
+<br />
 #### Notes
 
 1. Arrow function can't be used as **constructor** function ( i.e. can't be instantiated with `new` keyword ).
@@ -139,7 +140,7 @@ fn( 0 );
 
 
 
-<br>
+<br />
 #### Practical usage
 
 Arrow functions are used usually as callback functions, non-method functions or generally at situation where the dynamic binding of `this` and `arguments` isn't needed, for example:
