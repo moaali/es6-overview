@@ -30,8 +30,7 @@
 + Getter/Setter Functions
 + IIFE to Block
 
-<br/>
-<br/>
+<br/> <br/>
 ### Arrow Function
 
 #### Description
