@@ -231,7 +231,7 @@ let x = 1; // SyntaxError
 
 let y = 1;
 if ( true ) {
-    let y = 2 // Totally valid
+    let y = 2; // Totally valid
 }
 
 
@@ -272,9 +272,10 @@ const IDENTIFIER = expression; // Assignment is a must
 
 1. `const` creates global-scoped & block-scoped variable contrary to `var` that creates global-scoped & **function-scoped** only, same as `let`.
 2. `const` doesn't create properties on global object contrary to `var`, same as `let`.
-3. `const` allows only a single declaration for a sepecific identifier within the same scope. redeclaring the same variable created by `const` within the same scope throws an `SuntaxError`.
-4. `const` assignment (a.k.a: intialzation) is **a must** meaninig you **can't** do this `const x;` contrary to `let`.
-5. `const` gets hoisted but it can't be accessed within the **Temporal Dead Zone** (a.k.a: **TDZ**) means you can't reference the identifier before or within the declaration statement or `RefrenceError` is thrown;
+3. `const` allows only a single declaration for a sepecific identifier within the same scope. redeclaring the same variable created by `const` within the same scope throws a `SyntaxError`. re-assigment of the same identifier at any scope throws a `TypeError`.
+4. `const` allows you to delete/write/edit the assigned object.
+5. `const` assignment (a.k.a: intialzation) is **a must** meaninig you **can't** do this `const x;` contrary to `let`.
+6. `const` gets hoisted but it can't be accessed within the **Temporal Dead Zone** (a.k.a: **TDZ**) means you can't reference the identifier before or within the declaration statement or `RefrenceError` is thrown;
 
 - Common practice when using `const`: capitalize all identifier letters and in case multiple words identifier use `_` as separator.
 
@@ -297,14 +298,23 @@ window.X; // undefined not 0
 // [ Item 3 ]
 const X = 0;
 const X = 1; // SyntaxError
+X = 1; // TypeError: re-assigment is not allowed
 
 const Y = 1;
 if ( true ) {
-    const Y = 2 // Totally valid
+    Y = 2; // TypeError: re-assigment is not allowed
+    const Y = 2; // Totally valid
 }
 
 
-// [ Item 5 ]
+// [ Item 4 ]
+const ARR = [1, 2];
+ARR.push(3);    // Valid: ARR = [1, 2, 3]
+delete ARR[0];  // Valid: ARR = [undefined, 2, 3]
+ARR[0] = 'ONE'; // Valid: ARR = ['ONE', 2, 3]
+
+
+// [ Item 6 ]
 const X = 0;
 
 const FN = function () {
@@ -312,7 +322,7 @@ const FN = function () {
     const X = 1; // Error below asserts that x is hoisted
 };
 
-fn() // RefrenceError
+FN() // RefrenceError
 ```
 
 ##### Practical Usage
