@@ -58,14 +58,14 @@ singleParam => {} // With single pramerter parens are optional
 
 #### Notes
 
-Arrow function can't be used as constructor function ( i.e. can't bet instaited with new keyword ).
-Arrow function can't be used as generator.
-Arrow function doesn't have a prototype property.
-Arrow function doesn't bind this, argument, new.target, super.
-Arrow function has lexical this meaning it inherits this from the enclosing context.
-Arrow function with call(), apply(), bind() ignores the passed context and only consider the passed arguments.
-Arrow function ignores Strict mode rules regard this .
-Arrow function doesn't have arguments object, it inherits it from the enclosing regular function otherwise RefrenceError is thrown.
+1. Arrow function can't be used as constructor function ( i.e. can't bet instaited with new keyword ).
+2. Arrow function can't be used as generator.
+3. Arrow function doesn't have a prototype property.
+4. Arrow function doesn't bind this, argument, new.target, super.
+5. Arrow function has lexical this meaning it inherits this from the enclosing context.
+6. Arrow function with call(), apply(), bind() ignores the passed context and only consider the passed arguments.
+7. Arrow function ignores Strict mode rules regard this .
+8. Arrow function doesn't have arguments object, it inherits it from the enclosing regular function otherwise RefrenceError is thrown.
 
 ```javascript
 // [ Note 3 ]
