@@ -42,6 +42,7 @@ Shorter syntax for function expression with simplified scope rules.
 
 #### Syntax
 
+```javascript
 ( Function Parameters ) => { Function Body }   // Basic syntax
 () => {} // No prameters   
 ( param1, param2, paramN ) => {} // Multiple prameters
@@ -51,7 +52,7 @@ singleParam => {} // With single pramerter parens are optional
 ( ...rest ) => {} // rest parameters
 () => expression // implicit return: with mustaches and return keyword are optional when return single expression
 () => ({ x: 1 }) // for returning objects wrap object inside parens
-
+```
 
 
 
