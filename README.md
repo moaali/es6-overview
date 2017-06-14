@@ -10,23 +10,23 @@
 + Generators
 + Unicode
 + Modules
-+ Keyed collcections (Map, WeakMap, Set, WeakSet)
++ Keyed collections (Map, WeakMap, Set, WeakSet)
 + Proxies
 + Symbols
 + Subclasses - Built-ins
-+ Binary & Ocatl Literals
++ Binary & Octal Literals
 + Promises
 + Reflection
 + Tails Calls
 + Default function parameter
-+ Super In Objects
++ Super in Objects
 + Iterators
 + Math
 + Array
 + Number
 + Object
 + String
-+ Aync Await
++ Async Await
 + Getter/Setter Functions
 + IIFE to Block
 
@@ -45,19 +45,19 @@ Shorter syntax for function expression with simplified scope rules.
 ```javascript
 ( /* Function Parameters */ ) => { /* Function Body */ }   // Basic syntax
 
-// No prameters
+// No parameters
 () => {}
 
-// Multiple prameters
+// Multiple parameters
 ( param1, param2, paramN ) => {}
 
-// Destructuing paramertes
+// Destructuring parameters
 ( [x, y], [1, 2] ) => {}
 
-// default paramerters
+// Default parameters
 ( x = 1 ) => {}
 
-// rest parameters
+// Rest parameters
 ( ...rest ) => {}
 
 /**
@@ -66,10 +66,10 @@ Shorter syntax for function expression with simplified scope rules.
  */
 () => expression
 
-// for returning objects wrap object inside parens
+// for returning objects wrap object inside parenthesis
 () => ({ x: 1 })
 
-// With single pramerter parens are optional
+// With single parameter parenthesis are optional
 singleParam => {} 
 ```
 
@@ -77,7 +77,7 @@ singleParam => {}
 
 #### Notes
 
-1. Arrow function can't be used as constructor function ( i.e. can't bet instaited with new keyword ).
+1. Arrow function can't be used as constructor function ( i.e. can't be instantiated with new keyword ).
 2. Arrow function can't be used as generator.
 3. Arrow function doesn't have a prototype property.
 4. Arrow function doesn't bind this, argument, new.target, super.
@@ -117,7 +117,7 @@ fn( 0 );
 
 #### Practical usage
 
-Arrow functions are used usually as callback functions, non-method functions or generally at situation where the dynamic binidnig of `this` and `arguments` isn't needed for example:
+Arrow functions are used usually as callback functions, non-method functions or generally at situation where the dynamic binding of `this` and `arguments` isn't needed for example:
 
 1. use as functional programming methods iterator function.
 2. use as callback in timing functions.
@@ -158,4 +158,4 @@ p
 ;(global => {
   // IIFE with passed arguments
 })(window);
-```
+``` 
