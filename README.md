@@ -213,10 +213,10 @@ let identifier [= expression]; // Assignment is optional
 // [ Item 1 ]
 let x = 0; // global-scoped
 function fn() {
-    let y = 1; // function-scoped also block-scoped
-    if ( y === 1 ) {
-        let z = 2; // block-scoped
-    }
+  let y = 1; // function-scoped also block-scoped
+  if ( y === 1 ) {
+    let z = 2; // block-scoped
+  }
 }
 
 
@@ -231,7 +231,7 @@ let x = 1; // SyntaxError
 
 let y = 1;
 if ( true ) {
-    let y = 2; // Totally valid
+  let y = 2; // Totally valid
 }
 
 
@@ -239,8 +239,8 @@ if ( true ) {
 let x = 0;
 
 let fn = function () {
-    return x;
-    let x = 1; // Error below asserts that x is hoisted
+  return x;
+  let x = 1; // Error below asserts that x is hoisted
 };
 
 fn() // RefrenceError
@@ -283,10 +283,10 @@ const IDENTIFIER = expression; // Assignment is a must
 // [ Item 1 ]
 const X = 0; // global-scoped
 function fn() {
-    const Y = 1; // function-scoped also block-scoped
-    if ( Y === 1 ) {
-        const Z = 2; // block-scoped
-    }
+  const Y = 1; // function-scoped also block-scoped
+  if ( Y === 1 ) {
+    const Z = 2; // block-scoped
+  }
 }
 
 
@@ -302,8 +302,8 @@ X = 1; // TypeError: re-assigment is not allowed
 
 const Y = 1;
 if ( true ) {
-    Y = 2; // TypeError: re-assigment is not allowed
-    const Y = 2; // Totally valid
+  Y = 2; // TypeError: re-assigment is not allowed
+  const Y = 2; // Totally valid
 }
 
 
@@ -318,8 +318,8 @@ ARR[0] = 'ONE'; // Valid: ARR = ['ONE', 2, 3]
 const X = 0;
 
 const FN = function () {
-    return x;
-    const X = 1; // Error below asserts that x is hoisted
+  return x;
+  const X = 1; // Error below asserts that x is hoisted
 };
 
 FN() // RefrenceError
