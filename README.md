@@ -30,8 +30,8 @@
 + Getter/Setter Functions
 + IIFE to Block
 
-<br>
-<br>
+<br/>
+<br/>
 ### Arrow Function
 
 #### Description
@@ -41,7 +41,7 @@ Shorter syntax for function expression with simplified scope rules.
 
 
 
-<br>
+<br/>
 #### Syntax
 
 ```javascript
