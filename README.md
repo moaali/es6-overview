@@ -31,13 +31,16 @@
 + IIFE to Block
 
 
-Arrow Function
+### Arrow Function
 
-Description
+#### Description
 
 Shorter syntax for function expression with simplified scope rules.
 
-Syntax
+
+
+
+#### Syntax
 
 ( Function Parameters ) => { Function Body }   // Basic syntax
 () => {} // No prameters   
@@ -48,24 +51,22 @@ singleParam => {} // With single pramerter parens are optional
 ( ...rest ) => {} // rest parameters
 () => expression // implicit return: with mustaches and return keyword are optional when return single expression
 () => ({ x: 1 }) // for returning objects wrap object inside parens
-Notes
+
+
+
+
+#### Notes
 
 Arrow function can't be used as constructor function ( i.e. can't bet instaited with new keyword ).
-
 Arrow function can't be used as generator.
-
 Arrow function doesn't have a prototype property.
-
 Arrow function doesn't bind this, argument, new.target, super.
-
 Arrow function has lexical this meaning it inherits this from the enclosing context.
-
 Arrow function with call(), apply(), bind() ignores the passed context and only consider the passed arguments.
-
 Arrow function ignores Strict mode rules regard this .
-
 Arrow function doesn't have arguments object, it inherits it from the enclosing regular function otherwise RefrenceError is thrown.
 
+```javascript
 // [ Note 3 ]
 let arrow = () => {}; console.log( arrow.prototype ); // undefined
 
@@ -89,9 +90,13 @@ addOne.call( y ); // NaN not 1 as this === Window
 arrow( 1 ); }
 
 fn( 0 );
+```
+
+
 
 
 #### Practical usage
+
 Arrow functions are used usually as callback functions, non-method functions or generally at situation where the dynamic binidnig of `this` and `arguments` isn't needed for example:
 
 1. use as functional programming methods iterator function.
@@ -99,9 +104,9 @@ Arrow functions are used usually as callback functions, non-method functions or 
 3. use as Promises callback functions.
 4. use as simpler IIFE.
 
+```javascript
 // [ Item ]
 let arr = [1, 2, 3, 4, 5];
-
 let odd = arr.filter( item => item % 2 !== 0 ); // [1, 3, 5]
 
 
@@ -133,3 +138,4 @@ p
 ;(global => {
   // IIFE with passed arguments
 })(window);
+```
