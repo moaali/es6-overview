@@ -43,7 +43,8 @@ Shorter syntax for function expression with simplified scope rules.
 #### Syntax
 
 ```javascript
-( /* Function Parameters */ ) => { /* Function Body */ }   // Basic syntax
+// Basic syntax
+( /* Function Parameters */ ) => { /* Function Body */ }
 
 // No parameters
 () => {}
@@ -88,26 +89,41 @@ singleParam => {}
 
 ```javascript
 // [ Note 3 ]
-let arrow = () => {}; console.log( arrow.prototype ); // undefined
+let arrow = () => {}; 
+console.log( arrow.prototype ); // undefined
 
-// [ Note 4 ] let obj = { fn: function () { let arrow = () => { return this }
 
-return arrow();
-} };
+// [ Note 4 ]
+let obj = { 
+  fn: function () { 
+    let arrow = () => { return this }
+    return arrow();
+  }
+};
 
 obj.fn(); // obj not Window
 
-// [ Note 6 ] var addOne = () => { return this.x + 1 }
 
+// [ Note 6 ] 
+var addOne = () => { return this.x + 1 }
 var y = { x: 0 }
-
 addOne.call( y ); // NaN not 1 as this === Window
 
-// [ Note 7 ] let strict = () => { 'use strict'; return this; } // Window not undefined let loose = () => { return this; } // Window
 
-// [ Note 8 ] let fn = function ( x ) { console.log( arguments[0] ) // x let arrow = ( y ) => { console.log( arguments[0] ) // x not y }
+// [ Note 7 ] 
+let strict = () => { 'use strict'; return this; } // Window not undefined 
+let loose  = () => { return this; } // Window
 
-arrow( 1 ); }
+
+// [ Note 8 ]
+let fn = function ( x ) {
+  console.log( arguments[0] )   // x
+  let arrow = ( y ) => { 
+    console.log( arguments[0] ) // x not y 
+  }
+  
+  arrow( 1 );
+}
 
 fn( 0 );
 ```
@@ -141,13 +157,9 @@ let p = new Promise((resolve, reject) => {
   // Do your magic
 });
 
-p
-  .then(data => {
-    // Play with data
-  })
-  .catch(error => {
-    // Error handling
-  });
+p.then(data => {
+  // Play with data
+});
 
 
 // [ Item ]
