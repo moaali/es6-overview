@@ -622,7 +622,7 @@ parentName.sayName('Doe'); // TypeError
 Special type of string literals with the capability of holding embedded expressions and optionally parsed by custom function called tag function.
 
 
-#### Syntax
+#### Example
 ```javascript
 let string = `contents`;
 ```
@@ -665,7 +665,6 @@ const
  * @return {string} the newly parsed template literal contents.
  */
 function escape( strings, ...subs ) {
-  debugger;
   const results = [];
 
   strings = strings.map((string) => {
