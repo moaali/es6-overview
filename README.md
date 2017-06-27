@@ -486,3 +486,97 @@ import  './module'
 ##### Notes
 - Importing something that wasn't exported will fail.
 - If your module code will run once you can ignore all naming rules and just `import './filename'`.
+
+
+### Classes
+
+#### Description
+Syntactic sugar for prototypal inheritance in JavaScript.
+
+
+#### class
+Reserved keyword used to define a constructor class.
+``` javascript
+class ClassName {
+  // ...
+}
+```
+
+#### constructor()
+Method used once inside a class to define properties and methods on it.
+``` javascript
+class ClassName {
+  constructor() {
+    this.name = 'ClassName';
+  }
+}
+```
+
+
+#### extends
+Reserved keyword used when deriving subclasses from a superclass.
+``` javascript
+class Parent {
+  // ...
+}
+
+class Child extends Parent {
+  // ...
+}
+```
+
+#### super
+Reserved keyword used inside subclasses or object literals as a reference for their superclass, or their prototypes in case of object literals.
+``` javascript
+class Parent {
+  constructor(kind) {
+    this.kind = kind
+  }
+}
+
+class Child extends Parent {
+  constructor(childName, parentKind) {
+    super(parentKind);
+    this.name = childName;
+  }
+
+  sayName() {
+    console.log( 'My Name is ' + this.name + ' and I\'m ' + this.kind );
+  }
+}
+
+let baby = new Child('John', 'Human');
+baby.sayName(); // My Name is John and I'm Human
+```
+
+``` javascript
+const
+  Parent = {
+    kind: 'Human'
+  },
+
+  Child = {
+    name: 'John',
+    sayName() {
+      console.log( 'My Name is ' + this.name + ' and I\'m ' + super.kind )
+    }
+  };
+
+Object.setPrototypeOf(Child, Parent);
+Child.sayName(); // My Name is John and I'm Human
+```
+
+#### static
+Reserved keyword used to define (static methods) methods accessible only by classes themselves not their instances.
+``` javascript
+class Parent {
+  static sayName(name) {
+    console.log(name);
+  }
+}
+
+Parent.sayName('Doe'); // Doe
+
+const parentName = new Parent();
+parentName.sayName('Doe'); // TypeError
+```
