@@ -522,7 +522,7 @@ class ClassName {
 ```
 
 ##### Notes
-- `constructor` method can't be used with static keyword.
+- `constructor` method can't be used with `static` keyword.
 - `constructor` method can only be used **once** inside class.
 - Methods defined outside `constructor` is set on the class prototype.
 
