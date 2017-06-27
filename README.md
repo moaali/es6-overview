@@ -487,14 +487,13 @@ import  './module'
 - Importing something that wasn't exported will fail.
 - If your module code will run once you can ignore all naming rules and just `import './filename'`.
 
-
 ### Classes
 
 #### Description
 Syntactic sugar for prototypal inheritance in JavaScript.
 
 
-#### class
+#### `class`
 Reserved keyword used to define a constructor class.
 ``` javascript
 class ClassName {
@@ -502,7 +501,7 @@ class ClassName {
 }
 ```
 
-#### constructor()
+#### `constructor()`
 Method used once inside a class to define properties and methods on it.
 ``` javascript
 class ClassName {
@@ -513,7 +512,7 @@ class ClassName {
 ```
 
 
-#### extends
+#### `extends`
 Reserved keyword used when deriving subclasses from a superclass.
 ``` javascript
 class Parent {
@@ -525,7 +524,7 @@ class Child extends Parent {
 }
 ```
 
-#### super
+#### `super`
 Reserved keyword used inside subclasses or object literals as a reference for their superclass, or their prototypes in case of object literals.
 ``` javascript
 class Parent {
@@ -566,7 +565,7 @@ Object.setPrototypeOf(Child, Parent);
 Child.sayName(); // My Name is John and I'm Human
 ```
 
-#### static
+#### `static`
 Reserved keyword used to define (static methods) methods accessible only by classes themselves not their instances.
 ``` javascript
 class Parent {
