@@ -459,7 +459,7 @@ Promise.reject( arg )
 
 ### Modules
 
-#### export
+#### `export`
 ##### Syntax
 ``` javascript
 export default expression
@@ -472,14 +472,14 @@ export let multiple, names
 - The name of the default export can be omitted (i.e. you can export anonymous function).
 
 
-##### import
+##### `import`
 ##### Syntax
 ``` javascript
 import defaultName from './module'
 import * as namespace from './module'
-import { name, name as alias, ... } from './module'
+import { name1, name2 as alias, ... } from './module'
 import defaultName, * as namespace from './module'
-import defaultName, { name, name as alias, ... } from './module'
+import defaultName, { name1, name2 as alias, ... } from './module'
 import  './module'
 ```
 
