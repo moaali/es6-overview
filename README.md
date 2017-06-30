@@ -1130,6 +1130,6 @@ Returns the smallest possible positive number.
 
 ##### Syntax
 ```javascript
-Number.EPSILON // => 2e-52
+Number.EPSILON // => 2 ** -52
 ```
 
