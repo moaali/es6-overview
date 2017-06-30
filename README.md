@@ -761,6 +761,7 @@ for (let val of arr) {
 - Array.prototype.findIndex
 - Array.prototype.entries
 - Array.prototype.keys
+- Array.prototype.copyWithin
 
 
 #### `Array.from`
