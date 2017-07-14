@@ -1427,7 +1427,7 @@ const
 - **`Map`**
 - **`Set`**
 - **`NodeList`**
-- Object returned from `entries`, `keys`, `maps` methods.
+- Objects returned from `entries()`, `keys()`, `values()` methods.
 
 
 
