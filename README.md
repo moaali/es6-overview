@@ -3305,3 +3305,18 @@ Method returns the non-parsed string of template literals.
 String.raw({ raw: 'hello\n${x}' }, 'world'); // => "hello\\nworld"
 String.raw`'hello\nworld`; // => "hello\\nworld"
 ```
+
+
+### Binary and Octal Literals
+#### Description
+Two new numeric literal forms are added for binary (0b or 0B) and octal (0o or 0O).
+
+#### Examples
+```javascript
+0b11 // => 3
+0B11 // => 3
+0o10 // => 8
+0O10 // => 8
+```
+
+
