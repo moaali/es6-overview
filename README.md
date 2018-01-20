@@ -1,6 +1,6 @@
 ### TOC
 - [Arrow Function](#arrow-function)
-- [let, const and Block Scoping](#let,-const-and-block-scoping)
+- [let, const and Block Scoping](#let-const-and-block-scoping)
 - [Modules](#modules)
 - [Classes](#classes)
 - [Template Literals](#template-literals)
