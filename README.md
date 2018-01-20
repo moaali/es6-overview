@@ -1,34 +1,28 @@
-# es6-in-a-nutshell
-+ arrow function
-+ classes
-+ object literals extensions
-+ template literals
-+ assignment destructuring
-+ spread operator/ rest parameters
-+ let & const + black Scoping
-+ for ... of
-+ Generators
-+ Unicode
-+ Modules
-+ Keyed collections (Map, WeakMap, Set, WeakSet)
-+ Proxies
-+ Symbols
-+ Subclasses - Built-ins
-+ Binary & Octal Literals
-+ Promises
-+ Reflection
-+ Tails Calls
-+ Default function parameter
-+ Super in Objects
-+ Iterators
-+ Math
-+ Array
-+ Number
-+ Object
-+ String
-+ Async Await
-+ Getter/Setter Functions
-+ IIFE to Block
+### TOC
+- [Arrow Function](#arrow-function)
+- [let, const and Block Scoping](#let,-const-and-block-scoping)
+- [Modules](#modules)
+- [Classes](#classes)
+- [Template Literals](#template-literals)
+- [Spread / Rest Operator](#spread--rest-operator)
+- [New Statments](#new-statments)
+- [Array Methods](#array-methods)
+- [Number Methods](#number-methods)
+- [Object Methods](#object-methods)
+- [Collections](#collections)
+- [Iterables & Iterators](#iterables--iterators)
+- [Generators](#generators)
+- [Symbols](#symbols)
+- [Proxy](#proxy)
+- [Reflect](#reflect)
+- [Destructuring Assigment](#destructuring-assigment)
+- [Object Literal Enhancements](#object-literal-enhancements)
+- [Subclassable Built-ins](#subclassable-built-ins)
+- [Tail Call Optimization (TCO)](#tail-call-optimization-tco)
+- [Getter](#getter)
+- [Setter](#setter)
+- [String Methods](#string-methods)
+- [Binary and Octal Literals](#binary-and-octal-literals)
 
 
 ### Arrow Function
